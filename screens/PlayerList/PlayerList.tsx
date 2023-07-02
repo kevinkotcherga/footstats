@@ -92,13 +92,6 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 		setSelectedPositions(positions);
 	};
 
-	console.log(selectedPositions);
-	console.log(
-		players.filter((player: IPlayer) =>
-			selectedPositions.includes(player.ultraPosition),
-		),
-	);
-
 	if (isLoading) {
 		return (
 			<View style={loaderStyles.loader}>
@@ -146,6 +139,9 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 					onSelectedItemsChange={updateSelectedPositions}
 					selectedItems={selectedPositions}
 					selectText="Filtrer les postes"
+					searchInputPlaceholderText="Rechercher.."
+					submitButtonText="Valider"
+					submitButtonColor="#4054CC"
 					tagRemoveIconColor="#CCC"
 					tagBorderColor="#CCC"
 					tagTextColor="#CCC"
