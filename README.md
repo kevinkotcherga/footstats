@@ -2,8 +2,9 @@
 
 Ce projet est réalisé avec expo.
 
-Il est disponible en ligne à ce lien : 
-https://expo.dev/accounts/kevinkotcherga/projects/mpg-app/updates/7eaa6797-2a42-425c-b9e0-f64c488e5f90
+Il est disponible en ligne à ces liens : 
+- Android: exp://u.expo.dev/update/72e042e4-88c3-46f6-8a5f-23aec576386b
+- IOS: exp://u.expo.dev/update/e617c032-d829-42ca-8b08-801da300cee4
 
 Pour lancer le projet localement, vous devez installer les dépendances NPM en exécutant :
 
@@ -25,7 +26,7 @@ npx expo start --tunnel
 1) L'utilisateur est invité à sélectionner un championnat.
 2) L'utilisateur est invité à choisir un club. La data est filtré pour afficher les clubs actifs du championnat. Les images de maillots sont gérées avec `react-native-expo-image-cache` pour de meilleures performances.
 3) L'utilisateur peut effectuer une sélection parmi les joueurs. Il peut filtrer la liste en fonction du nom et de la position d'un joueur, ainsi que la trier selon la cote ou la position du joueur.
-4) La data d'un joueur est affiché selon sa position. Si la donnée est inexistante dans un composant, il ne s'affichera pas.
+4) La data d'un joueur est affiché selon sa position. Si la donnée est inexistante dans un composant il ne s'affichera pas.
 
 Le code est automatiquement indenté avec Visual Studio. Si votre éditeur de code affiche un code incorrectement indenté, je vous recommande d'utiliser Visual Studio pour ouvrir le projet.
 
