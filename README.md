@@ -28,5 +28,6 @@ npx expo start --tunnel
 4) La data d'un joueur est affiché selon sa position. Si la donnée est inexistante pour un composant, il ne s'affichera pas.
 
 Le code est automatiquement indenté avec Visual Studio. Si votre éditeur de code affiche un code incorrectement indenté, je vous recommande d'utiliser Visual Studio pour ouvrir le projet.
+
 J'ai choisi de ne pas utiliser redux car l'application est relativement simple avec une hiérarchie de composants linéaire, la data passe directement de composant en composant.
 
