@@ -23,9 +23,9 @@ npx expo start --tunnel
 
 ## Détail du projet
 1) L'utilisateur est invité à sélectionner un championnat.
-2) L'utilisateur est invité à chosir un club. La data est filtré pour afficher les clubs actifs du championnat. Les images de maillots sont gérés avec `react-native-expo-image-cache` pour de meilleurs performances.
+2) L'utilisateur est invité à choisir un club. La data est filtré pour afficher les clubs actifs du championnat. Les images de maillots sont gérées avec `react-native-expo-image-cache` pour de meilleures performances.
 3) L'utilisateur peut effectuer une sélection parmi les joueurs. La liste peut être filtrée en fonction du nom, de la position ou de la cote d'un joueur.
-4) La data d'un joueur est affiché selon sa position. Si la donnée est inéxistante pour un composant, il ne s'affichera pas.
+4) La data d'un joueur est affiché selon sa position. Si la donnée est inexistante pour un composant, il ne s'affichera pas.
 
 Le code est automatiquement indenté avec Visual Studio. Si votre éditeur de code affiche un code incorrectement indenté, je vous recommande d'utiliser Visual Studio pour ouvrir le projet
 
