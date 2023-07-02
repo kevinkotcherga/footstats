@@ -9,6 +9,7 @@ import axios from 'axios';
 import { SearchBar } from '@rneui/themed';
 import React, { useEffect, useState } from 'react';
 import { RouteProp } from '@react-navigation/native';
+import MultipleSelect from 'react-native-multiple-select';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Row, Table, TableWrapper } from 'react-native-table-component';
 
@@ -29,12 +30,22 @@ type Props = {
 	navigation: PlayerListNavigationProp;
 };
 
+const positionOptions = [
+	{ label: 'Gardien', value: 10 },
+	{ label: 'Défenseur', value: 20 },
+	{ label: 'Latéral', value: 21 },
+	{ label: 'Milieu défensif', value: 30 },
+	{ label: 'Milieu offensif', value: 31 },
+	{ label: 'Attaquant', value: 40 },
+];
+
 const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 	const { clubId, championship } = route.params;
 	const [search, setSearch] = useState<string>('');
 	const [players, setPlayers] = useState<IPlayer[]>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 	const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+	const [selectedPositions, setSelectedPositions] = useState<number[]>([]);
 
 	useEffect(() => {
 		const getPlayers = async () => {
@@ -77,6 +88,17 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 		setSearch(value);
 	};
 
+	const updateSelectedPositions = (positions: number[]) => {
+		setSelectedPositions(positions);
+	};
+
+	console.log(selectedPositions);
+	console.log(
+		players.filter((player: IPlayer) =>
+			selectedPositions.includes(player.ultraPosition),
+		),
+	);
+
 	if (isLoading) {
 		return (
 			<View style={loaderStyles.loader}>
@@ -118,6 +140,20 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 					inputStyle={{ backgroundColor: '#e7e7e7' }}
 					containerStyle={{ backgroundColor: '#ffffff' }}
 				/>
+				<MultipleSelect
+					items={positionOptions}
+					uniqueKey="value"
+					onSelectedItemsChange={updateSelectedPositions}
+					selectedItems={selectedPositions}
+					selectText="Filtrer les postes"
+					tagRemoveIconColor="#CCC"
+					tagBorderColor="#CCC"
+					tagTextColor="#CCC"
+					selectedItemTextColor="#CCC"
+					selectedItemIconColor="#CCC"
+					itemTextColor="#000"
+					displayKey="label"
+				/>
 				<Table>
 					<TableWrapper>
 						{players
@@ -127,6 +163,13 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 									? `${player.firstName} ${player.lastName}`
 									: player.lastName;
 								return fullName.includes(search);
+							})
+							.filter((player: IPlayer) => {
+								if (selectedPositions.length === 0) {
+									return true;
+								} else {
+									return selectedPositions.includes(player.ultraPosition);
+								}
 							}).length === 0 ? (
 							<Text style={styles.noResultMessage}>
 								Aucun résultat pour cette recherche..
@@ -160,6 +203,13 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
 												? `${player.firstName} ${player.lastName}`
 												: player.lastName;
 											return fullName.includes(search);
+										})
+										.filter((player: IPlayer) => {
+											if (selectedPositions.length === 0) {
+												return true;
+											} else {
+												return selectedPositions.includes(player.ultraPosition);
+											}
 										})
 										.map((player: IPlayer) => {
 											const fullName = player.firstName

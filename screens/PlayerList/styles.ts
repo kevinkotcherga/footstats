@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { Row } from "react-native-table-component";
 
 const styles = StyleSheet.create({
 	headerRow: {
@@ -38,6 +39,9 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		color: 'red',
 	},
+  search: {
+    flexDirection: 'row',
+  }
 });
 
 export default styles;

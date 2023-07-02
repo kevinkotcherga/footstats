@@ -19,6 +19,23 @@ type Props = {
 	route: PlayerRouteProp;
 };
 
+const getPositionLabel = (ultraPosition: number) => {
+	switch (ultraPosition) {
+		case 10:
+			return 'Gardien';
+		case 20:
+			return 'Defenseur';
+		case 21:
+			return 'Lateral';
+		case 30:
+			return 'Milieu défensif';
+		case 31:
+			return 'Milieu offensif';
+		default:
+			return 'Attaquant';
+	}
+};
+
 const Player: React.FC<Props> = ({ route }) => {
 	const { player, championship } = route.params;
 	const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -40,23 +57,6 @@ const Player: React.FC<Props> = ({ route }) => {
 
 		getPlayers();
 	}, []);
-
-	const getPositionLabel = (ultraPosition: number) => {
-		switch (ultraPosition) {
-			case 10:
-				return 'Gardien';
-			case 20:
-				return 'Defenseur';
-			case 21:
-				return 'Lateral';
-			case 30:
-				return 'Milieu défensif';
-			case 31:
-				return 'Milieu offensif';
-			default:
-				return 'Attaquant';
-		}
-	};
 
 	if (isLoading) {
 		return (
