@@ -3,8 +3,8 @@
 Ce projet est réalisé avec expo.
 
 Il est disponible en ligne à ces liens : 
-- Android: exp://u.expo.dev/update/72e042e4-88c3-46f6-8a5f-23aec576386b
-- IOS: exp://u.expo.dev/update/e617c032-d829-42ca-8b08-801da300cee4
+- Android: `exp://u.expo.dev/update/72e042e4-88c3-46f6-8a5f-23aec576386b`
+- IOS: `exp://u.expo.dev/update/e617c032-d829-42ca-8b08-801da300cee4`
 
 Pour lancer le projet localement, vous devez installer les dépendances NPM en exécutant :
 
