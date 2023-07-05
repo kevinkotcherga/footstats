@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.kevinkotcherga.mpgapp"
@@ -28,11 +26,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "e7267bd6-6936-4d0c-96bd-26104437b3a0"
-      }
-    },
+    "extra": {},
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
