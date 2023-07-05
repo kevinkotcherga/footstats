@@ -218,7 +218,7 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
           </View>
           <FlatList
             data={filteredPlayers}
-            keyExtractor={(item) => item.id.toString()}
+            keyExtractor={(item) => item.id}
             renderItem={renderItem}
           />
         </>
