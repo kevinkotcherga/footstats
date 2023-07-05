@@ -1,14 +1,30 @@
 import { StyleSheet } from "react-native";
-import { Row } from "react-native-table-component";
 
 const styles = StyleSheet.create({
+  headerContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 8,
+    backgroundColor: "#ffffff",
+  },
+  headerText: {
+    fontWeight: "bold",
+  },
+  rowContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    padding: 8,
+    backgroundColor: "#ffffff",
+  },
+  players: {
+    flex: 2,
+  },
+  cell: {
+    flex: 1,
+  },
 	headerRow: {
 		padding: 10,
 		backgroundColor: '#ffffff',
-	},
-	headerText: {
-		color: '#393D3F',
-		fontWeight: '700',
 	},
 	tile: {
 		padding: 10,
@@ -18,9 +34,6 @@ const styles = StyleSheet.create({
 	},
 	quotation: {
 		fontWeight: 'bold',
-	},
-	players: {
-		color: '#1B7ADA',
 	},
 	poste: {
 		color: '#546A7B',
@@ -39,9 +52,6 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		color: 'red',
 	},
-  search: {
-    flexDirection: 'row',
-  }
 });
 
 export default styles;
