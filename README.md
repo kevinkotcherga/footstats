@@ -23,10 +23,26 @@ npx expo start --tunnel
 ```
 
 ## Détail du projet
-1) L'utilisateur est invité à sélectionner un championnat.
-2) L'utilisateur est invité à choisir un club. La data est filtré pour afficher les clubs actifs du championnat. Les images de maillots sont gérées avec `react-native-expo-image-cache` pour de meilleures performances.
-3) L'utilisateur peut effectuer une sélection parmi les joueurs. Il peut filtrer la liste en fonction du nom et de la position d'un joueur, ainsi que la trier selon la cote ou la position du joueur.
-4) La data d'un joueur est affiché selon sa position. Si la donnée est inexistante dans un composant il ne s'affichera pas.
+L'utilisateur est invité à sélectionner un championnat :
+
+![1](https://github.com/kevinkotcherga/react-native-app/assets/78493094/ea41a342-421a-4d49-915d-4768f3f60da5)
+
+
+L'utilisateur est invité à choisir un club. La data est filtré pour afficher les clubs actifs du championnat. Les images de maillots sont gérées avec `react-native-expo-image-cache` pour de meilleures performances :
+   
+![2](https://github.com/kevinkotcherga/react-native-app/assets/78493094/e23e59c5-3acf-4627-87a7-a88f3f556eb6)
+
+
+L'utilisateur peut effectuer une sélection parmi les joueurs. Il peut filtrer la liste en fonction du nom et de la position d'un joueur, ainsi que la trier selon la cote ou la position du joueur :
+
+![3](https://github.com/kevinkotcherga/react-native-app/assets/78493094/b825fd2e-e7b9-4654-9484-92f8d51a363a)
+![4](https://github.com/kevinkotcherga/react-native-app/assets/78493094/998e402d-60db-4697-ba92-9342e6b3b757)
+
+
+La data d'un joueur est affiché selon sa position. Si la donnée est inexistante dans un composant il ne s'affichera pas :
+   
+![5](https://github.com/kevinkotcherga/react-native-app/assets/78493094/3c23e303-4541-4a6c-af3c-8c0790f10df6)
+
 
 Le code est automatiquement indenté avec Visual Studio. Si votre éditeur de code affiche un code incorrectement indenté, je vous recommande d'utiliser Visual Studio pour ouvrir le projet.
 
