@@ -92,30 +92,6 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
     setSelectedPositions(positions);
   };
 
-  if (isLoading) {
-    return (
-      <View style={loaderStyles.loader}>
-        <ActivityIndicator size="large" color="#000000" />
-      </View>
-    );
-  }
-
-  if (!players) {
-    return (
-      <View style={styles.errorContainer}>
-        <Text style={styles.errorMessage}>Erreur de chargement..</Text>
-      </View>
-    );
-  }
-
-  if (!players.filter((player: IPlayer) => player.clubId === clubId).length) {
-    return (
-      <View style={styles.errorContainer}>
-        <Text style={styles.noResultMessage}>Aucune donnée disponible.</Text>
-      </View>
-    );
-  }
-
   const filteredPlayers = players
     .filter((player: IPlayer) => player.clubId === clubId)
     .filter((player: IPlayer) => {
@@ -162,6 +138,30 @@ const PlayerList: React.FC<Props> = ({ route, navigation }) => {
       </TouchableOpacity>
     );
   };
+
+  if (isLoading) {
+    return (
+      <View style={loaderStyles.loader}>
+        <ActivityIndicator size="large" color="#000000" />
+      </View>
+    );
+  }
+
+  if (!players) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text style={styles.errorMessage}>Erreur de chargement..</Text>
+      </View>
+    );
+  }
+
+  if (!players.filter((player: IPlayer) => player.clubId === clubId).length) {
+    return (
+      <View style={styles.errorContainer}>
+        <Text style={styles.noResultMessage}>Aucune donnée disponible.</Text>
+      </View>
+    );
+  }
 
   return (
     <View>
