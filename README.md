@@ -43,6 +43,3 @@ La data d'un joueur est affiché selon sa position. Si la donnée est inexistant
    
 ![5](https://github.com/kevinkotcherga/react-native-app/assets/78493094/3c23e303-4541-4a6c-af3c-8c0790f10df6)
 
-
-J'ai choisi de ne pas utiliser redux car l'application est relativement simple avec une hiérarchie de composants linéaire, la data passe directement de composant en composant.
-
